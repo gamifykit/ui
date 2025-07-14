@@ -1,5 +1,5 @@
-import type { Config } from "tailwindcss"
-import tailwindAnimate from "tailwindcss-animate"
+import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
 export default {
   darkMode: ["class"],
@@ -59,6 +59,23 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
     },
+    fontFamily: {
+      "mona-sans": [
+        '"MonaSans"',
+        {
+          fontFeatureSettings: '"ss02" on, "ss07" on',
+          fontVariationSettings: '"wdth" 112.5',
+        },
+      ],
+      rany: "Rany",
+      "roboto-serif": '"Roboto Serif Variable"',
+      "roboto-serif-slab": [
+        '"Roboto Serif Variable"',
+        {
+          fontVariationSettings: '"wdth" 112.5, "GRAD" 100',
+        },
+      ],
+    },
   },
   plugins: [tailwindAnimate],
-} satisfies Config
+} satisfies Config;

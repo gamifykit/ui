@@ -149,6 +149,10 @@
     @apply mt-2;
 }
 
+:root {
+    --font-roboto-serif: "Roboto Serif", serif;
+}
+
 .container,
 .sm\:container,
 .md\:container,
