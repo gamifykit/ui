@@ -10,12 +10,19 @@
     "registry:build": "shadcn build"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.14",
     "@radix-ui/react-label": "^2.1.1",
+    "@radix-ui/react-navigation-menu": "^1.2.13",
+    "@radix-ui/react-scroll-area": "^1.2.9",
+    "@radix-ui/react-separator": "^1.1.7",
     "@radix-ui/react-slot": "^1.1.1",
     "@tanstack/react-query": "^5.64.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.23.3",
     "lucide-react": "^0.471.1",
+    "mini-svg-data-uri": "^1.4.4",
+    "motion": "^12.23.3",
     "next": "15.1.4",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
@@ -23,6 +30,7 @@
     "shadcn": "2.4.0-canary.12",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
+    "vaul": "^1.1.2",
     "zod": "^3.24.1"
   },
   "devDependencies": {
@@ -35,5 +43,6 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@10.13.1+sha512.37ebf1a5c7a30d5fabe0c5df44ee8da4c965ca0c5af3dbab28c3a1681b70a256218d05c81c9c0dcf767ef6b8551eb5b960042b9ed4300c59242336377e01cfad"
 }
