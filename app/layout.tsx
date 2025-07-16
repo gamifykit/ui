@@ -4,6 +4,7 @@ import { cn, constructMetadata } from "@/lib/utils";
 import "@fontsource-variable/roboto-serif/full.css";
 import localFont from "next/font/local";
 import Header from "@/components/sections/header";
+import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = constructMetadata({});
 
@@ -60,6 +61,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -6,11 +6,12 @@ export const siteConfig: SiteConfig = {
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   keywords: ["SaaS", "Template", "Next.js", "React", "Tailwind CSS"],
   links: {
-    email: "support@gamifykit.com",
+    // email: "support@gamifykit.com",
+    bluesky: "https://bsky.app/profile/gamifykit.com",
     twitter: "https://twitter.com/gamifykit",
-    discord: "https://discord.gg/",
+    // discord: "https://discord.gg/",
     github: "https://github.com/gamifykit",
-    instagram: "https://instagram.com/gamifykit/",
+    // instagram: "https://instagram.com/gamifykit/",
   },
   header: [
     {
@@ -34,11 +35,12 @@ export type SiteConfig = {
   url: string;
   keywords: string[];
   links: {
-    email: string;
+    email?: string;
+    bluesky: string;
     twitter: string;
-    discord: string;
+    discord?: string;
     github: string;
-    instagram: string;
+    instagram?: string;
   };
   header: {
     href: string;
