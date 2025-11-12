@@ -11,6 +11,16 @@
     --font-roboto-serif-slab: "Roboto Serif Variable";
     --font-roboto-serif-slab--font-variation-settings: "wdth" 112.5, "GRAD" 100;
 
+    --color-wg-purple-700: #4316ca;
+    --color-wg-purple-600: #5423e7;
+    --color-wg-purple-500: #7047eb;
+
+    --color-wg-yellow-400: #ffce5c;
+    --color-wg-yellow-300: #ffda85;
+
+    --color-wg-gray-900: #121217;
+    --color-wg-gray-50: #f7f7f8;
+
     --color-background: hsl(var(--background));
     --color-foreground: hsl(var(--foreground));
 

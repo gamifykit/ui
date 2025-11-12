@@ -72,7 +72,7 @@ function HeroContent({
       >
         <span className="max-w-[1024px] whitespace-pre-wrap ~text-3xl/6xl text-default-font text-center font-inter-stylized">
           <span className="text-[1.5em]">
-            <span className="inline-block h-[1.6em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-purple-600 via-violet-700 to-indigo-800">
+            <span className="inline-block h-[1.6em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700">
               Gamify
             </span>
             <span className="text-[0.98em]">Kit</span>
@@ -80,7 +80,7 @@ function HeroContent({
           <br />
           Free UI kit to
           <br />
-          <span className=" inline-block h-[1.1em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-purple-600 via-violet-700 to-indigo-800">
+          <span className=" inline-block h-[1.1em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700">
             gamify
           </span>{" "}
           your apps
