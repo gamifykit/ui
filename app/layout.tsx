@@ -8,24 +8,20 @@ import Footer from "@/components/sections/footer";
 
 export const metadata: Metadata = constructMetadata({});
 
-// Using local Mona Sans font because font files from Google Font and Fontsource don't come with font features like stylistic sets
-const MonaSans = localFont({
+// Using local Inter font because font files from Google Font and Fontsource don't come with font features like stylistic sets
+const InterVariable = localFont({
   src: [
     {
-      path: "./fonts/MonaSansVF-Regular.woff2",
-      weight: "200 900",
+      path: "./fonts/InterVariable.woff2",
     },
-  ],
-
-  declarations: [
     {
-      prop: "font-stretch",
-      value: "75% 125%",
+      path: "./fonts/InterVariable-Italic.woff2",
+      style: "italic",
     },
   ],
   display: "swap",
   fallback: ["sans-serif"],
-  variable: "--font-mona-sans",
+  variable: "--font-inter",
   preload: true,
 });
 
@@ -53,7 +49,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="font-mona-sans">
+    <html lang="en" className="font-inter">
       <body
         className={cn(
           "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth",

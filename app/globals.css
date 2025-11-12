@@ -7,9 +7,6 @@
 @theme {
     --font-*: initial;
     --font-rany: Rany;
-    --font-mona-sans: "MonaSans";
-    --font-mona-sans--font-feature-settings: "ss02" on, "ss07" on;
-    --font-mona-sans--font-variation-settings: "wdth" 112.5;
     --font-roboto-serif: "Roboto Serif Variable";
     --font-roboto-serif-slab: "Roboto Serif Variable";
     --font-roboto-serif-slab--font-variation-settings: "wdth" 112.5, "GRAD" 100;
@@ -228,4 +225,27 @@
 .lg\:container,
 .xl\:container {
     @apply mx-auto;
+}
+
+.font-inter {
+    /* calt for Contextual Alternates like centered symbols among numbers such as "3*9" and "12:39", brackets around capital letters e.g. "(SEMI)" etc. */
+    /* dlig for Discretionary Ligatures like "ffi" "fj" */
+    /* ss01 for alternate digits i.e. flat-top "3", open-ended "4", straight-tailed "6" and "9" */
+    /* cv11 for single-storey "a" */
+    font-feature-settings: "calt", "dlig", "ss01", "cv11";
+}
+
+.font-inter-stylized {
+    /* ss02 for disambiguated slashed zero "0",  "I" with serif vs "l" with tail vs "1" with serif */
+    /* ss03 for rounded quotes and comma */
+    /* cv12 for compact f */
+    /* cv13 for compact t */
+    font-feature-settings:
+        "calt", "dlig", "ss01", "ss02", "ss03", "cv11", "cv12", "cv13";
+}
+
+@supports (font-variation-settings: normal) {
+    .font-inter {
+        font-family: InterVariable, sans-serif;
+    }
 }

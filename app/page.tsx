@@ -4,8 +4,9 @@ import * as React from "react";
 // import { ExampleForm } from "@/registry/new-york/example-form/example-form";
 // import PokemonPage from "@/registry/new-york/complex-component/page";
 
-import Hero from "@/components/sections/hero";
+import Hero from "@/components/sections/customHero";
 import { Icons } from "@/components/icons";
+import { TypeAnimation } from "react-type-animation";
 
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
@@ -13,12 +14,9 @@ import { Icons } from "@/components/icons";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col flex-1 gap-8">
+      <main className="flex flex-col flex-1 gap-8  md:px-8">
         <Hero
           content={{
-            title: "Free UI kit to",
-            titleHighlight: "gamify",
-            titleAfterHighlight: "your app",
             description:
               "A fully customizable component library for gamification built on top of shadcn/ui. Beautiful, accessible, and ready for production.",
             primaryAction: {

@@ -32,7 +32,9 @@ export default function Header() {
 
   return (
     <header
-      className={"sticky top-0 z-50 bg-background/60 backdrop-blur-sm border-b"}
+      className={
+        "sticky top-0 z-50 bg-background/60 backdrop-blur-sm border-b py-6 md:px-8 md:py-0"
+      }
     >
       <div className="flex justify-between items-center sm:container py-2">
         <div className="flex items-center">
