@@ -78,7 +78,7 @@ function HeroContent({
         {title}{" "}
         {titleHighlight && (
           <>
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-purple-600 via-violet-700 to-indigo-800">
+            <span className="text-transparent bg-clip-text bg-linear-to-br from-purple-600 via-violet-700 to-indigo-800">
               {titleHighlight}
             </span>{" "}
           </>
@@ -86,7 +86,7 @@ function HeroContent({
         {titleAfterHighlight}
       </motion.h1>
       <motion.p
-        className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8"
+        className="max-w-2xl leading-normal text-muted-foreground sm:text-xl sm:leading-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.1, duration: 0.8, ease: "easeInOut" }}
