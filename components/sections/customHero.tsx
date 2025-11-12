@@ -20,9 +20,15 @@ function HeroPill({ href, text, icon, endIcon }: HeroPillProps) {
   const controls = useAnimation();
 
   return (
-    <Link href={href || "/docs"} className="group">
+    <Link
+      href={href || "#"}
+      className={cn("group", !href ? "cursor-default" : "")}
+    >
       <motion.div
-        className="inline-flex items-center gap-2 rounded-full border bg-background px-4 py-1.5 text-sm transition-colors hover:bg-muted"
+        className={cn(
+          "inline-flex items-center gap-2 rounded-full border bg-background px-4 py-1.5 text-sm transition-colors",
+          href ? "hover:bg-muted" : "",
+        )}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -75,7 +81,7 @@ function HeroContent({
             <span className="inline-block h-[1.6em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700">
               Gamify
             </span>
-            <span className="text-[0.98em]">Kit</span>
+            <span className="inline-block text-[0.98em]">Kit</span>
           </span>
           <br />
           Free UI kit to
