@@ -8,11 +8,11 @@ import {
   CardDescription,
   CardContent,
   CardFooter,
-} from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Button } from "@/components/ui/button"
-import { Textarea } from "@/components/ui/textarea"
+} from "@/registry/new-york/ui/card"
+import { Input } from "@/registry/new-york/ui/input"
+import { Label } from "@/registry/new-york/ui/label"
+import { Button } from "@/registry/new-york/ui/button"
+import { Textarea } from "@/registry/new-york/ui/textarea"
 import { z } from "zod"
 
 const exampleFormSchema = z.object({
@@ -65,14 +65,14 @@ export function ExampleForm() {
   )
 
   return (
-    <Card className="w-full max-w-sm">
-      <CardHeader>
-        <CardTitle>How can we help?</CardTitle>
-        <CardDescription>
-          Need help with your project? We&apos;re here to assist you.
-        </CardDescription>
-      </CardHeader>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="w-full max-w-sm">
+      <Card>
+        <CardHeader>
+          <CardTitle>How can we help?</CardTitle>
+          <CardDescription>
+            Need help with your project? We&apos;re here to assist you.
+          </CardDescription>
+        </CardHeader>
         <CardContent className="flex flex-col gap-6">
           <div
             className="group/field grid gap-2"
@@ -88,7 +88,7 @@ export function ExampleForm() {
               id="name"
               name="name"
               placeholder="Lee Robinson"
-              className="group-data-[invalid=true]/field:border-destructive group-data-[invalid=true]/field:focus-visible:ring-destructive"
+              className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
               disabled={pending}
               aria-invalid={!!state.errors?.name}
               aria-errormessage="error-name"
@@ -114,7 +114,7 @@ export function ExampleForm() {
               id="email"
               name="email"
               placeholder="leerob@acme.com"
-              className="group-data-[invalid=true]/field:border-destructive group-data-[invalid=true]/field:focus-visible:ring-destructive"
+              className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
               disabled={pending}
               aria-invalid={!!state.errors?.email}
               aria-errormessage="error-email"
@@ -140,7 +140,7 @@ export function ExampleForm() {
               id="message"
               name="message"
               placeholder="Type your message here..."
-              className="group-data-[invalid=true]/field:border-destructive group-data-[invalid=true]/field:focus-visible:ring-destructive"
+              className="group-data-[invalid=true]/field:border-destructive focus-visible:group-data-[invalid=true]/field:ring-destructive"
               disabled={pending}
               aria-invalid={!!state.errors?.message}
               aria-errormessage="error-message"
@@ -158,7 +158,7 @@ export function ExampleForm() {
             {pending ? "Sending..." : "Send Message"}
           </Button>
         </CardFooter>
-      </form>
-    </Card>
+      </Card>
+    </form>
   )
 }
