@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import path from "path";
 import { promises as fs } from "fs";
-import { registryItemSchema } from "shadcn/registry";
+import { registryItemSchema } from "shadcn/schema";
 
 // Use the registry.json file to generate static paths.
 export const generateStaticParams = async () => {
