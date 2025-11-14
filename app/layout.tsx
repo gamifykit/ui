@@ -9,7 +9,8 @@ import Footer from "@/components/sections/footer";
 export const metadata: Metadata = constructMetadata({});
 
 // Using local Inter font because font files from Google Font and Fontsource don't come with font features like stylistic sets
-const _InterVariable = localFont({
+/* eslint-disable @typescript-eslint/no-unused-vars */
+const InterVariable = localFont({
   src: [
     {
       path: "./fonts/InterVariable.woff2",
@@ -26,7 +27,8 @@ const _InterVariable = localFont({
 });
 
 // Rany is not available on Google Font and Fontsource
-const _Rany = localFont({
+/* eslint-disable @typescript-eslint/no-unused-vars */
+const Rany = localFont({
   src: [
     {
       path: "./fonts/Rany.woff",
