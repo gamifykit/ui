@@ -8,7 +8,7 @@ export const generateStaticParams = async () => {
   const registryData = await import("@/registry.json");
   const registry = registryData.default;
 
-  return registry.items.map((item) => ({
+  return registry.items.map((_item) => ({
     // TODO: to uncomment when components are ready
     // name: item.name,
   }));
@@ -16,14 +16,15 @@ export const generateStaticParams = async () => {
 
 // This route shows an example for serving a component using a route handler.
 export async function GET(
-  request: Request,
+  _request: Request,
   { params }: { params: Promise<{ name: string }> },
 ) {
   try {
+    /* eslint-disable @typescript-eslint/no-unused-vars */
     const { name } = await params;
     // Cache the registry import
     const registryData = await import("@/registry.json");
-    const registry = registryData.default;
+    const _registry = registryData.default;
 
     // Find the component from the registry.
     // TODO: to uncomment when components are ready

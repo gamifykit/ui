@@ -5,7 +5,7 @@ import * as React from "react";
 // import PokemonPage from "@/registry/new-york/complex-component/page";
 
 import Hero from "@/components/sections/customHero";
-import { Icons } from "@/components/icons";
+// import { Icons } from "@/components/icons";
 
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.

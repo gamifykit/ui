@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 // import { DocsSidebar } from "@/components/docs-sidebar";
 
 export default function Header() {
-  const [addBorder, setAddBorder] = useState(false);
+  const [_addBorder, setAddBorder] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {

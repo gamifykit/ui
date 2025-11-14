@@ -9,7 +9,7 @@ import Footer from "@/components/sections/footer";
 export const metadata: Metadata = constructMetadata({});
 
 // Using local Inter font because font files from Google Font and Fontsource don't come with font features like stylistic sets
-const InterVariable = localFont({
+const _InterVariable = localFont({
   src: [
     {
       path: "./fonts/InterVariable.woff2",
@@ -26,7 +26,7 @@ const InterVariable = localFont({
 });
 
 // Rany is not available on Google Font and Fontsource
-const Rany = localFont({
+const _Rany = localFont({
   src: [
     {
       path: "./fonts/Rany.woff",

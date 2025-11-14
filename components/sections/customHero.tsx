@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 // import { TypeAnimation } from "react-type-animation";
 
-const ease = [0.16, 1, 0.3, 1];
+// const ease = [0.16, 1, 0.3, 1];
 
 interface HeroPillProps {
   href?: string;
