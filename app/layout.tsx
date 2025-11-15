@@ -1,16 +1,13 @@
+import { RootProvider } from "fumadocs-ui/provider/next";
+import "./global.css";
 import type { Metadata } from "next";
-import "./globals.css";
-import { cn, constructMetadata } from "@/lib/utils";
-import "@fontsource-variable/roboto-serif/full.css";
 import localFont from "next/font/local";
-import Header from "@/components/sections/header";
-import Footer from "@/components/sections/footer";
+import constructMetadata from "@/lib/construct-metadata";
 
 export const metadata: Metadata = constructMetadata({});
 
 // Using local Inter font because font files from Google Font and Fontsource don't come with font features like stylistic sets
-/* eslint-disable @typescript-eslint/no-unused-vars */
-const InterVariable = localFont({
+const Inter = localFont({
   src: [
     {
       path: "./fonts/InterVariable.woff2",
@@ -27,7 +24,6 @@ const InterVariable = localFont({
 });
 
 // Rany is not available on Google Font and Fontsource
-/* eslint-disable @typescript-eslint/no-unused-vars */
 const Rany = localFont({
   src: [
     {
@@ -45,21 +41,11 @@ const Rany = localFont({
   preload: true,
 });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function Layout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className="font-inter">
-      <body
-        className={cn(
-          "min-h-screen bg-background antialiased w-full mx-auto scroll-smooth",
-        )}
-      >
-        <Header />
-        {children}
-        <Footer />
+    <html lang="en" className={Inter.className} suppressHydrationWarning>
+      <body className="flex flex-col min-h-screen">
+        <RootProvider>{children}</RootProvider>
       </body>
     </html>
   );

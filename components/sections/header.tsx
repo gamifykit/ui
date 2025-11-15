@@ -1,15 +1,16 @@
 "use client";
 
+import Link from "next/link";
+import { useEffect, useState } from "react";
+// import { ThemeToggle } from "@/components/theme-toggle";
+// import { DocsSidebar } from "@/components/docs-sidebar";
+import { Logo } from "@/components/logo";
+import { siteConfig } from "@/lib/config";
 // import Drawer from "@/components/drawer";
 // import { Icons } from "@/components/icons";
 // import Menu from "@/components/menu";
 // import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { siteConfig } from "@/lib/config";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-// import { ThemeToggle } from "@/components/theme-toggle";
-// import { DocsSidebar } from "@/components/docs-sidebar";
 
 export default function Header() {
   const [_addBorder, setAddBorder] = useState(false);
@@ -43,11 +44,7 @@ export default function Header() {
             title="GamifyKit logo"
             className="relative mr-6 flex items-center space-x-2"
           >
-            <img
-              className="w-auto h-[40px] my-1"
-              src="/gamifykit-logo-full-320x64.svg"
-              alt={siteConfig.name}
-            />
+            <Logo className="my-1 h-auto w-10" />
             <span className="font-bold sr-only">{siteConfig.name}</span>
           </Link>
           {/* <Menu /> */}

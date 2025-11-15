@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
+import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
 
 // const ease = [0.16, 1, 0.3, 1];
 

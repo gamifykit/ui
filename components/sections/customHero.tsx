@@ -1,10 +1,13 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
+import localFont from "next/font/local";
+import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import { Logo } from "../logo";
+
 // import { TypeAnimation } from "react-type-animation";
 
 // const ease = [0.16, 1, 0.3, 1];
@@ -76,17 +79,17 @@ function HeroContent({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
-        <span className="max-w-[1024px] whitespace-pre-wrap ~text-3xl/6xl text-default-font text-center font-inter-stylized">
-          <span className="text-[1.5em]">
-            <span className="inline-block h-[1.6em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700">
-              Gamify
-            </span>
-            <span className="inline-block text-[0.98em]">Kit</span>
-          </span>
+        <span className="max-w-5xl whitespace-pre-wrap ~text-3xl/6xl text-default-font text-center font-inter-stylized">
+          <Logo className="h-28 w-auto" />
           <br />
           Free UI kit to
           <br />
-          <span className=" inline-block h-[1.1em] font-rany font-bold text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700">
+          <span
+            className={cn(
+              "inline-block h-[1.1em] text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700",
+              "font-rany font-bold",
+            )}
+          >
             gamify
           </span>{" "}
           your apps
