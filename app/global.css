@@ -153,6 +153,6 @@
 
 @supports (font-variation-settings: normal) {
   .font-inter {
-    font-family: InterVariable, sans-serif;
+    font-family: Inter, sans-serif;
   }
 }

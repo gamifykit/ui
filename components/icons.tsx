@@ -1,4 +1,4 @@
-type IconProps = React.HTMLAttributes<SVGElement>;
+type IconProps = React.SVGAttributes<SVGElement>;
 
 export const Icons = {
   logo: (props: IconProps) => (
