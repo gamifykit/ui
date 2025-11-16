@@ -1,4 +1,3 @@
-import { Logo } from "@/components/logo";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import Link from "next/link";
 

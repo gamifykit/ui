@@ -4,7 +4,7 @@ export const siteConfig: SiteConfig = {
   name: "GamifyKit",
   description: "Gamify your app with GamifyKit",
   url: process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-  keywords: ["SaaS", "Template", "Next.js", "React", "Tailwind CSS"],
+  keywords: ["SaaS", "Gamifyit", "shadcn/ui", "Tailwind CSS", "gamification"],
   links: {
     // email: "support@gamifykit.com",
     bluesky: "https://bsky.app/profile/gamifykit.com",

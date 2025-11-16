@@ -1,10 +1,6 @@
 import { RootProvider } from "fumadocs-ui/provider/next";
 import "./global.css";
-import type { Metadata } from "next";
 import localFont from "next/font/local";
-import constructMetadata from "@/lib/construct-metadata";
-
-export const metadata: Metadata = constructMetadata({});
 
 // Using local Inter font because font files from Google Font and Fontsource don't come with font features like stylistic sets
 const Inter = localFont({
@@ -24,7 +20,7 @@ const Inter = localFont({
 });
 
 // Rany is not available on Google Font and Fontsource
-const Rany = localFont({
+const _Rany = localFont({
   src: [
     {
       path: "./fonts/Rany.woff",

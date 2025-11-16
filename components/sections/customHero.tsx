@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import localFont from "next/font/local";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
