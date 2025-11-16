@@ -1,3 +1,5 @@
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import "./global.css";
 import localFont from "next/font/local";
@@ -40,8 +42,14 @@ const _Rany = localFont({
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={Inter.className} suppressHydrationWarning>
+      <meta
+        name="robots"
+        content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+      />
       <body className="flex flex-col min-h-screen">
         <RootProvider>{children}</RootProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
