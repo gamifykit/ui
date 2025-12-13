@@ -79,7 +79,7 @@ function HeroContent({
         transition={{ duration: 0.8, ease: "easeInOut" }}
       >
         <span className="max-w-5xl whitespace-pre-wrap ~text-3xl/6xl text-default-font text-center font-inter-stylized">
-          <Logo className="h-28 w-auto" />
+          <Logo className="h-28 w-auto max-w-full" />
           <br />
           Free UI kit to
           <br />
