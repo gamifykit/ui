@@ -3,6 +3,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import "./global.css";
 import localFont from "next/font/local";
+import { ThemeProvider } from "@/contexts/theme-context";
 
 // Using local Inter font because font files from Google Font and Fontsource don't come with font features like stylistic sets
 const Inter = localFont({
@@ -47,7 +48,9 @@ export default function Layout({ children }: LayoutProps<"/">) {
         content="noindex, nofollow, noarchive, nosnippet, noimageindex"
       />
       <body className="flex flex-col min-h-screen">
-        <RootProvider>{children}</RootProvider>
+        <ThemeProvider>
+          <RootProvider>{children}</RootProvider>
+        </ThemeProvider>
         <Analytics />
         <SpeedInsights />
       </body>
