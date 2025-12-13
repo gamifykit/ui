@@ -2,5 +2,19 @@
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "gamifykit",
   "homepage": "https://gamifykit.com",
-  "items": []
+  "items": [
+    {
+      "name": "daily-streak",
+      "type": "registry:component",
+      "title": "Daily Streak",
+      "description": "A card component that displays a user's daily streak with a 7-day dot grid",
+      "registryDependencies": ["card", "badge"],
+      "files": [
+        {
+          "path": "registry/new-york/components/daily-streak.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
 }

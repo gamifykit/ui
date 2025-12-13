@@ -1,0 +1,53 @@
+---
+title: Daily Streak
+description: A card component that displays a user's daily streak with a 7-day dot grid.
+---
+
+<Tabs items={['Preview', 'Code']} className="bg-transparent border-none">
+  <Tab value="Preview" className="border-none bg-transparent p-0 mt-3">
+    <PreviewComponents registryName="usage-table">
+      <DailyStreakDemo />
+    </PreviewComponents>
+  </Tab>
+
+  <Tab value="Code" className="mt-3">
+  <include cwd lang="tsx" meta='title="@/components/demo/daily-streak-demo.tsx"'>components/demo/daily-streak-demo.tsx</include>
+  </Tab>
+</Tabs>
+
+## Installation
+
+You can copy the component from the registry and paste into your project:
+
+```bash
+npx shadcn@latest add @gamifykit/daily-streak
+```
+
+Or open this page's registry item directly in your favorite builder using the buttons above.
+
+## Usage
+
+```tsx
+import { DailyStreak } from "@/components/ui/daily-streak";
+
+export default function Example() {
+  return (
+    <DailyStreak
+      title="DAILY STREAK"
+      currentStreak={5}
+      bestStreak={12}
+      daysToShow={7}
+      className="w-full max-w-md"
+    />
+  );
+}
+```
+
+### Props
+
+- `currentStreak` number — current streak length (required)
+- `bestStreak` number — best streak length
+- `days` `Array<{ date: Date|string; done: boolean }>` — optional explicit day completion map
+- `daysToShow` number — number of days to render (default 7)
+- `showBestBadge` boolean — show the "Best" badge (default true)
+- `showLabels` boolean — show weekday labels under dots (default true)
