@@ -1,0 +1,77 @@
+---
+title: Achievements
+description: A card component that displays a user's achievements and unlockable achievements.
+---
+
+<Tabs items={['Preview', 'Code']} className="bg-transparent border-none">
+  <Tab value="Preview" className="border-none bg-transparent p-0 mt-3">
+    <PreviewComponents registryName="achievements">
+      <AchievementsDemo />
+    </PreviewComponents>
+  </Tab>
+
+  <Tab value="Code" className="mt-3">
+  <include cwd lang="tsx" meta='title="@/components/demo/achievements-demo.tsx"'>components/demo/achievements-demo.tsx</include>
+  </Tab>
+</Tabs>
+
+## Installation
+
+You can copy the component from the registry and paste into your project:
+
+```bash
+npx shadcn@latest add @gamifykit/achievements
+```
+
+Or open this page's registry item directly in your favorite builder using the buttons above.
+
+## Usage
+
+```tsx
+import { Achievements } from "@/components/ui/achievements";
+
+const achievements = [
+  {
+    id: "1",
+    title: "First Steps",
+    description: "Complete your first daily task",
+    unlockedAt: new Date(),
+  },
+  {
+    id: "2",
+    title: "Master Planner",
+    description: "Create 10 custom goals",
+    progress: 8,
+    total: 10,
+    isLocked: true,
+  }
+];
+
+export default function Example() {
+  return (
+    <Achievements
+      title="My Achievements"
+      achievements={achievements}
+      className="w-full max-w-md"
+    />
+  );
+}
+```
+
+### Props
+
+- `title` string — component title (default "Achievements")
+- `description` string — optional subtitle
+- `achievements` `Achievement[]` — list of achievement objects (required)
+
+### Achievement Object
+
+- `id` string — unique identifier
+- `title` string — achievement name
+- `description` string — achievement description
+- `icon` ReactNode — optional icon
+- `unlockedAt` Date | string — when it was unlocked
+- `progress` number — current progress for locked achievements
+- `total` number — target progress value
+- `isLocked` boolean — whether it's currently locked
+- `isSecret` boolean — whether to hide details until unlocked

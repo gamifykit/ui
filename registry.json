@@ -15,6 +15,23 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "achievements",
+      "type": "registry:component",
+      "title": "Achievements",
+      "description": "A card component that displays a user's achievements and unlockable achievements",
+      "registryDependencies": [
+        "card",
+        "badge",
+        "progress"
+      ],
+      "files": [
+        {
+          "path": "registry/new-york/components/achievements.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
