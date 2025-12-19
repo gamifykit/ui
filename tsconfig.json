@@ -18,7 +18,8 @@
     "paths": {
       "@/*": ["./*"],
       "@/.source": [".source"],
-      "@/registry": ["./registry.json"]
+      "@/registry": ["./registry.json"],
+      "fumadocs-mdx:collections/*": [".source/*"]
     },
     "plugins": [
       {

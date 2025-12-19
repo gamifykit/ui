@@ -14,10 +14,10 @@ export const siteConfig: SiteConfig = {
     // instagram: "https://instagram.com/gamifykit/",
   },
   header: [
-    {
-      href: "/docs",
-      label: "Docs",
-    },
+    // {
+    //   href: "/docs",
+    //   label: "Docs",
+    // },
     // {
     //   href: "/docs/components",
     //   label: "Components",

@@ -23,6 +23,11 @@ export function baseOptions(): BaseLayoutProps {
       ),
     },
     githubUrl: "https://github.com/gamifykit/ui",
-    children: <Link href="/docs">Docs</Link>,
+    links: [
+        {
+            type: "custom",
+            children: <Link href="/docs">Docs</Link>,
+        },
+    ],
   };
 }
