@@ -10,9 +10,11 @@ export type Achievement = {
   title: string;
   description: string;
   icon?: React.ReactNode;
+  badgeClassName?: string;
   unlockedAt?: Date | string;
   progress?: number;
   total?: number;
+  progressClassName?: string;
   isLocked?: boolean;
   isSecret?: boolean;
 };
@@ -49,7 +51,8 @@ export function Achievements({
                 "flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border-2",
                 achievement.isLocked
                   ? "bg-muted text-muted-foreground border-dashed"
-                  : "bg-primary/10 text-primary border-primary/20"
+                  : "bg-primary/10 text-primary border-primary/20",
+                achievement.badgeClassName
               )}
             >
               {achievement.isSecret && achievement.isLocked ? (
@@ -82,7 +85,10 @@ export function Achievements({
                       {achievement.progress} / {achievement.total}
                     </span>
                   </div>
-                  <Progress value={(achievement.progress / achievement.total) * 100} className="h-1" />
+                  <Progress
+                    value={(achievement.progress / achievement.total) * 100}
+                    className={cn("h-1", achievement.progressClassName)}
+                  />
                 </div>
               )}
             </div>

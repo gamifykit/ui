@@ -6,7 +6,8 @@ const demoAchievements: Achievement[] = [
     id: "1",
     title: "First Steps",
     description: "Complete your first daily task",
-    icon: <Zap className="h-6 w-6" />,
+    icon: <Zap fill="currentColor" className="h-6 w-6" />,
+    badgeClassName: "bg-yellow-500 border-yellow-500 text-white",
     unlockedAt: "2025-12-10",
   },
   {
@@ -14,6 +15,7 @@ const demoAchievements: Achievement[] = [
     title: "Consistency King",
     description: "Maintain a 7-day streak",
     icon: <Trophy className="h-6 w-6" />,
+    badgeClassName: "bg-purple-500/10 border-purple-500/20 text-purple-500",
     unlockedAt: "2025-12-17",
   },
   {
@@ -21,8 +23,10 @@ const demoAchievements: Achievement[] = [
     title: "Early Bird",
     description: "Complete a task before 7 AM",
     icon: <Star className="h-6 w-6" />,
+    badgeClassName: "bg-emerald-500/10 border-emerald-500/20 text-emerald-500",
     progress: 3,
     total: 5,
+    progressClassName: "[&>div]:bg-emerald-500",
     isLocked: true,
   },
   {
