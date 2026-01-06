@@ -4,6 +4,7 @@ import { PreviewComponents } from "@/components/preview-components";
 import * as TabsComponents from "fumadocs-ui/components/tabs";
 import DailyStreakDemo from "@/components/demo/daily-streak-demo";
 import AchievementsDemo from "@/components/demo/achievements-demo";
+import LeaderboardDemo from "@/components/demo/leaderboard-demo";
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
@@ -11,6 +12,7 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     PreviewComponents,
     DailyStreakDemo,
     AchievementsDemo,
+    LeaderboardDemo,
     ...TabsComponents,
   };
 }

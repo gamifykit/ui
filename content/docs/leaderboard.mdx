@@ -1,0 +1,119 @@
+---
+title: Leaderboard
+description: A card component that displays a user ranking with scores and avatars.
+---
+
+<Tabs items={['Preview', 'Code']} className="bg-transparent border-none">
+  <Tab value="Preview" className="border-none bg-transparent p-0 mt-3">
+    <PreviewComponents registryName="leaderboard">
+      <LeaderboardDemo />
+    </PreviewComponents>
+  </Tab>
+
+  <Tab value="Code" className="mt-3">
+  <include cwd lang="tsx" meta='title="@/components/demo/leaderboard-demo.tsx"'>components/demo/leaderboard-demo.tsx</include>
+  </Tab>
+</Tabs>
+
+## Installation
+
+You can copy the component from the registry and paste into your project:
+
+```bash
+npx shadcn@latest add @gamifykit/leaderboard
+```
+
+Or open this page's registry item directly in your favorite builder using the buttons above.
+
+## Usage
+
+```tsx
+import { Leaderboard } from "@/components/ui/leaderboard";
+import { Medal } from "lucide-react";
+
+const entries = [
+  {
+    id: "1",
+    name: "Alex Johnson",
+    score: 1250,
+    rank: 1,
+    avatar: "/avatars/alex.png",
+    trend: 2,
+    rankColor: "text-yellow-500",
+    className: "bg-yellow-500/10 border-yellow-500/20",
+  },
+  {
+    id: "2",
+    name: "Sarah Smith",
+    score: 1100,
+    rank: 2,
+    isCurrentUser: true,
+    trend: -1,
+    rankNode: <Medal className="h-4 w-4 text-slate-400" />,
+  },
+  {
+    id: "3",
+    name: "Michael Brown",
+    score: 950,
+    rank: 3,
+    trend: 0,
+  },
+  {
+    id: "4",
+    name: "Emma Wilson",
+    score: 820,
+    rank: 4,
+    trend: 5,
+    trendClassName: "text-blue-500 font-bold",
+  },
+  {
+    id: "5",
+    name: "James Davis",
+    score: 750,
+    rank: 5,
+    trend: -2,
+  },
+  {
+    id: "6",
+    name: "Olivia Garcia",
+    score: 680,
+    rank: 6,
+  },
+];
+
+export default function Example() {
+  return (
+    <Leaderboard
+      title="Global Rankings"
+      description="Top performers this week"
+      entries={entries}
+      paginate={true}
+      pageSize={4}
+      className="w-full max-w-md"
+    />
+  );
+}
+```
+
+### Props
+
+- `title` string — component title (default "Leaderboard")
+- `description` string — optional subtitle
+- `entries` `LeaderboardEntry[]` — list of ranking entries (required)
+- `limit` number — maximum number of entries to display (default 5 without pagination, total limit with pagination)
+- `paginate` boolean — whether to enable pagination (default false)
+- `pageSize` number — number of entries per page when pagination is enabled (default 5)
+
+### LeaderboardEntry Object
+
+- `id` string — unique identifier
+- `name` string — user's display name
+- `score` number — user's numeric score
+- `rank` number — user's current rank
+- `rankColor` string — custom CSS class for the rank icon color
+- `rankNode` ReactNode — custom component for the rank (replaces icon/number)
+- `avatar` string — URL to user's avatar image
+- `isCurrentUser` boolean — highlights the entry as the current user
+- `className` string — custom CSS classes for the row container
+- `trend` number — amount of rank change (positive for up, negative for down, zero for neutral) (optional)
+- `trendClassName` string — custom CSS classes for the rank change indicator (optional)

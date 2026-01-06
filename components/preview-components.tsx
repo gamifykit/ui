@@ -32,7 +32,7 @@ export function PreviewComponents({
     setPreviewDarkMode,
   } = useTheme();
   const themeStyles = getThemeStyles(currentTheme, previewDarkMode);
-  const registryUrl = `https://billingsdk.com/r/${registryName}.json`;
+  const registryUrl = `https://gamifykit.com/r/${registryName}.json`;
 
   // Open-in helpers
   const openInV0 = () => {
