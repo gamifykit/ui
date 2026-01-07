@@ -28,9 +28,9 @@ export default function ErrorPage({
             Something went wrong
           </h2>
           <div className="mt-6 flex gap-3">
-            <Button onClick={reset}>Try Again</Button>
+            <Button onClick={reset}>Try again</Button>
             <Button variant="outline" asChild>
-              <Link href="/docs">View Documentation</Link>
+              <Link href="/docs">View documentation</Link>
             </Button>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import { Icons } from "@/components/icons";
 import Hero from "@/components/sections/customHero";
 
 export default function HomePage() {
@@ -10,16 +11,17 @@ export default function HomePage() {
         content={{
           description:
             "A fully customizable component library for gamification built on top of shadcn/ui. Beautiful, accessible, and ready for production.",
-          // primaryAction: {
-          //   href: "/docs",
-          //   text: "Documentation (coming soon)",
-          //   icon: <Icons.book className="h-4 w-4" />,
-          // },
-          // secondaryAction: {
-          //   href: "/docs",
-          //   text: "Components",
-          //   icon: <Icons.component className="h-4 w-4" />,
-          // },
+          primaryAction: {
+            href: "/docs/quick-start",
+            text: "Get started",
+            icon: <Icons.chevronRight className="h-4 w-4" strokeWidth="4" />,
+            iconPosition: "right",
+          },
+          secondaryAction: {
+            href: "/docs",
+            text: "View documentation",
+            icon: <Icons.book className="h-4 w-4" strokeWidth="3" />,
+          },
         }}
       />
     </main>

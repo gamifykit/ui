@@ -76,11 +76,13 @@ interface HeroContentProps {
     href: string;
     text: string;
     icon?: React.ReactNode;
+    iconPosition?: "left" | "right";
   };
   secondaryAction?: {
     href: string;
     text: string;
     icon?: React.ReactNode;
+    iconPosition?: "left" | "right";
   };
 }
 
@@ -163,11 +165,16 @@ function HeroContent({
             href={primaryAction.href}
             className={cn(
               buttonVariants({ size: "lg" }),
-              "gap-2 w-full sm:w-auto justify-center font-inter-stylized font-bold text-lg",
+              "gap-2 w-full sm:w-auto justify-center font-inter-stylized text-lg px-6! py-6!",
             )}
           >
-            {primaryAction.icon}
+            {(primaryAction.iconPosition === undefined ||
+              primaryAction.iconPosition === "left") &&
+              primaryAction.icon}
             {primaryAction.text}
+            {primaryAction.iconPosition !== undefined &&
+              primaryAction.iconPosition === "right" &&
+              primaryAction.icon}
           </Link>
         )}
         {secondaryAction && (
@@ -175,7 +182,7 @@ function HeroContent({
             href={secondaryAction.href}
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
-              "gap-2 w-full sm:w-auto justify-center",
+              "gap-2 w-full sm:w-auto justify-center text-lg px-6! py-6!",
             )}
           >
             {secondaryAction.icon}
