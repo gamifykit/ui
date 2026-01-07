@@ -7,14 +7,14 @@ const config = {
   async rewrites() {
     return [
       {
-        source: '/ph/static/:path*',
-        destination: 'https://eu-assets.i.posthog.com/static/:path*',
+        source: "/ph/static/:path*",
+        destination: "https://eu-assets.i.posthog.com/static/:path*",
       },
       {
-        source: '/ph/:path*',
-        destination: 'https://eu.i.posthog.com/:path*',
+        source: "/ph/:path*",
+        destination: "https://eu.i.posthog.com/:path*",
       },
-    ]
+    ];
   },
   reactStrictMode: true,
   skipTrailingSlashRedirect: true,

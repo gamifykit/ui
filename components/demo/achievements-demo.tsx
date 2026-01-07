@@ -1,5 +1,8 @@
-import { Achievements, type Achievement } from "@/registry/new-york/components/achievements";
-import { Trophy, Zap, Star, Target, Crown } from "lucide-react";
+import { Crown, Star, Target, Trophy, Zap } from "lucide-react";
+import {
+  type Achievement,
+  Achievements,
+} from "@/registry/new-york/components/achievements";
 
 const demoAchievements: Achievement[] = [
   {

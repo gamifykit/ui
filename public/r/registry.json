@@ -21,11 +21,7 @@
       "type": "registry:component",
       "title": "Achievements",
       "description": "A card component that displays a user's achievements and unlockable achievements",
-      "registryDependencies": [
-        "card",
-        "badge",
-        "progress"
-      ],
+      "registryDependencies": ["card", "badge", "progress"],
       "files": [
         {
           "path": "registry/new-york/components/achievements.tsx",
@@ -38,12 +34,7 @@
       "type": "registry:component",
       "title": "Leaderboard",
       "description": "A card component that displays a user ranking with scores and avatars",
-      "registryDependencies": [
-        "card",
-        "avatar",
-        "badge",
-        "button"
-      ],
+      "registryDependencies": ["card", "avatar", "badge", "button"],
       "files": [
         {
           "path": "registry/new-york/components/leaderboard.tsx",

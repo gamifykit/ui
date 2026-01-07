@@ -1,6 +1,9 @@
-import { Leaderboard, type LeaderboardEntry } from "@/registry/new-york/components/leaderboard";
 import { Medal } from "lucide-react";
-import {Avatar, AvatarFallback} from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import {
+  Leaderboard,
+  type LeaderboardEntry,
+} from "@/registry/new-york/components/leaderboard";
 
 const demoEntries: LeaderboardEntry[] = [
   {
@@ -11,14 +14,21 @@ const demoEntries: LeaderboardEntry[] = [
     rankColor: "text-yellow-500",
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Alex",
     trend: 2,
-    className: "bg-yellow-500/20 dark:bg-yellow-500/10 border border-yellow-500",
+    className:
+      "bg-yellow-500/20 dark:bg-yellow-500/10 border border-yellow-500",
   },
   {
     id: "2",
     name: "Sarah Smith",
     score: 11200,
     rank: 2,
-    rankNode: <Avatar><AvatarFallback className="bg-slate-400"><Medal className="h-4 w-4 text-white" /></AvatarFallback></Avatar>,
+    rankNode: (
+      <Avatar>
+        <AvatarFallback className="bg-slate-400">
+          <Medal className="h-4 w-4 text-white" />
+        </AvatarFallback>
+      </Avatar>
+    ),
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Sarah",
     trend: -1,
   },
@@ -38,7 +48,8 @@ const demoEntries: LeaderboardEntry[] = [
     avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Emma",
     isCurrentUser: true,
     trend: 5,
-    trendClassName: "border-none bg-emerald-100 dark:bg-emerald-200/30 px-1 rounded text-emerald-700 dark:text-emerald-300",
+    trendClassName:
+      "border-none bg-emerald-100 dark:bg-emerald-200/30 px-1 rounded text-emerald-700 dark:text-emerald-300",
   },
   {
     id: "5",

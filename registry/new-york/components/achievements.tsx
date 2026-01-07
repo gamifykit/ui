@@ -1,9 +1,15 @@
-import * as React from "react";
+import { Check, Lock } from "lucide-react";
+import type * as React from "react";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { Check, Lock } from "lucide-react";
 
 export type Achievement = {
   id: string;
@@ -38,7 +44,8 @@ export function Achievements({
         <div className="flex items-center justify-between">
           <CardTitle>{title}</CardTitle>
           <Badge variant="secondary">
-            {achievements.filter((a) => !a.isLocked).length} / {achievements.length}
+            {achievements.filter((a) => !a.isLocked).length} /{" "}
+            {achievements.length}
           </Badge>
         </div>
         {description && <CardDescription>{description}</CardDescription>}
@@ -52,19 +59,26 @@ export function Achievements({
                 achievement.isLocked
                   ? "bg-muted text-muted-foreground border-dashed"
                   : "bg-primary/10 text-primary border-primary/20",
-                achievement.badgeClassName
+                achievement.badgeClassName,
               )}
             >
               {achievement.isSecret && achievement.isLocked ? (
                 <Lock className="h-6 w-6" />
               ) : (
-                achievement.icon || (achievement.isLocked ? <Lock className="h-6 w-6" /> : <Check className="h-6 w-6" />)
+                achievement.icon ||
+                (achievement.isLocked ? (
+                  <Lock className="h-6 w-6" />
+                ) : (
+                  <Check className="h-6 w-6" />
+                ))
               )}
             </div>
             <div className="flex-1 space-y-1">
               <div className="flex items-center justify-between gap-2">
                 <p className="font-medium leading-none">
-                  {achievement.isSecret && achievement.isLocked ? "Secret Achievement" : achievement.title}
+                  {achievement.isSecret && achievement.isLocked
+                    ? "Secret Achievement"
+                    : achievement.title}
                 </p>
                 {achievement.unlockedAt && !achievement.isLocked && (
                   <span className="text-[10px] text-muted-foreground uppercase">
@@ -77,20 +91,22 @@ export function Achievements({
                   ? "Keep playing to reveal this achievement"
                   : achievement.description}
               </p>
-              {achievement.isLocked && typeof achievement.progress === "number" && typeof achievement.total === "number" && (
-                <div className="pt-2">
-                  <div className="flex justify-between text-[10px] mb-1 text-muted-foreground">
-                    <span>Progress</span>
-                    <span>
-                      {achievement.progress} / {achievement.total}
-                    </span>
+              {achievement.isLocked &&
+                typeof achievement.progress === "number" &&
+                typeof achievement.total === "number" && (
+                  <div className="pt-2">
+                    <div className="flex justify-between text-[10px] mb-1 text-muted-foreground">
+                      <span>Progress</span>
+                      <span>
+                        {achievement.progress} / {achievement.total}
+                      </span>
+                    </div>
+                    <Progress
+                      value={(achievement.progress / achievement.total) * 100}
+                      className={cn("h-1", achievement.progressClassName)}
+                    />
                   </div>
-                  <Progress
-                    value={(achievement.progress / achievement.total) * 100}
-                    className={cn("h-1", achievement.progressClassName)}
-                  />
-                </div>
-              )}
+                )}
             </div>
           </div>
         ))}

@@ -1,7 +1,7 @@
-import posthog from 'posthog-js'
+import posthog from "posthog-js";
 
 posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
-    ui_host: 'https://eu.posthog.com',
-    api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
-    defaults: '2025-11-30'
+  ui_host: "https://eu.posthog.com",
+  api_host: process.env.NEXT_PUBLIC_POSTHOG_HOST,
+  defaults: "2025-11-30",
 });

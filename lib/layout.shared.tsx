@@ -1,25 +1,24 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
-import Image from "next/image";
-import Link from "next/link";
-import Icon from "@/app/favicon-32x32.png";
 import localFont from "next/font/local";
+import Image from "next/image";
+import Icon from "@/app/favicon-32x32.png";
 
 // Rany is not available on Google Font and Fontsource
 const Rany = localFont({
-    src: [
-        {
-            path: "../app/fonts/Rany.woff",
-            weight: "400",
-        },
-        {
-            path: "../app/fonts/Rany-Bold.woff",
-            weight: "700",
-        },
-    ],
-    display: "swap",
-    fallback: ["sans-serif"],
-    variable: "--font-rany",
-    preload: true,
+  src: [
+    {
+      path: "../app/fonts/Rany.woff",
+      weight: "400",
+    },
+    {
+      path: "../app/fonts/Rany-Bold.woff",
+      weight: "700",
+    },
+  ],
+  display: "swap",
+  fallback: ["sans-serif"],
+  variable: "--font-rany",
+  preload: true,
 });
 
 export function baseOptions(): BaseLayoutProps {

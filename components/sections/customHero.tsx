@@ -1,12 +1,12 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
+import localFont from "next/font/local";
 import Link from "next/link";
 import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Logo } from "../logo";
-import localFont from "next/font/local";
 
 // import { TypeAnimation } from "react-type-animation";
 
@@ -107,7 +107,7 @@ function HeroContent({
           <span
             className={cn(
               "inline-block h-[1.1em] text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700",
-                Rany.className,
+              Rany.className,
               " font-bold",
             )}
           >

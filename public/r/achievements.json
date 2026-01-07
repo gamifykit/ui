@@ -3,11 +3,7 @@
   "name": "achievements",
   "title": "Achievements",
   "description": "A card component that displays a user's achievements and unlockable achievements",
-  "registryDependencies": [
-    "card",
-    "badge",
-    "progress"
-  ],
+  "registryDependencies": ["card", "badge", "progress"],
   "files": [
     {
       "path": "registry/new-york/components/achievements.tsx",

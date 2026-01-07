@@ -44,7 +44,10 @@ const dotVariants = cva(
   },
 );
 
-function normalizeDays(days?: StreakDay[], daysToShow = 7): { date: Date; done: boolean }[] {
+function normalizeDays(
+  days?: StreakDay[],
+  daysToShow = 7,
+): { date: Date; done: boolean }[] {
   const today = new Date();
   // If not provided, generate an empty array of last N days with done=false
   const arr: { date: Date; done: boolean }[] = [];
@@ -116,7 +119,9 @@ export function DailyStreak({
       <CardContent className="pt-0">
         <div className="flex items-end justify-between">
           <div>
-            <div className="text-3xl font-bold leading-none">{currentStreak}</div>
+            <div className="text-3xl font-bold leading-none">
+              {currentStreak}
+            </div>
             <p className="text-xs text-muted-foreground">day streak</p>
           </div>
           <div className="flex items-center gap-2 text-amber-500">
@@ -138,7 +143,9 @@ export function DailyStreak({
             return (
               <div key={idx} className="flex flex-col items-center gap-1">
                 <div
-                  className={cn(dotVariants({ state: state as any, size: "md" }))}
+                  className={cn(
+                    dotVariants({ state: state as any, size: "md" }),
+                  )}
                   title={`${weekdayShort(item.date)} - ${item.done ? "Done" : "Missed"}`}
                   role="img"
                   aria-label={`${weekdayShort(item.date)} ${item.done ? "completed" : "missed"}`}

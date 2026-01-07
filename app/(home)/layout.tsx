@@ -1,5 +1,6 @@
 import { HomeLayout } from "fumadocs-ui/layouts/home";
 import type { Metadata } from "next";
+import { Icons } from "@/components/icons";
 import Footer from "@/components/sections/footer";
 import constructMetadata from "@/lib/construct-metadata";
 import { baseOptions } from "@/lib/layout.shared";
@@ -10,7 +11,16 @@ export const metadata: Metadata = constructMetadata({
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
-    <HomeLayout {...baseOptions()}>
+    <HomeLayout
+      {...baseOptions()}
+      links={[
+        {
+          icon: <Icons.book />,
+          url: "/docs",
+          text: "Docs",
+        },
+      ]}
+    >
       {children}
       <Footer />
     </HomeLayout>
