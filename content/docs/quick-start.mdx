@@ -1,0 +1,84 @@
+---
+title: Quick Start
+description: Get started with GamifyKit in your project.
+---
+
+GamifyKit is a collection of components built on top of shadcn/ui. This guide will help you get started with adding these components to your project.
+
+## Prerequisites
+
+Before you start, make sure you have a working project with [shadcn/ui](https://ui.shadcn.com/docs/installation) installed.
+
+1. **Next.js** project set up.
+2. **Tailwind CSS** configured.
+3. **shadcn/ui** initialized in your project.
+
+## Installation
+
+You can add components to your project using the shadcn/ui CLI. For example, to add the `achievements` component:
+
+```bash
+npx shadcn@latest add https://gamifykit.com/r/achievements.json
+```
+
+Or if you've already added GamifyKit as a remote:
+
+```bash
+npx shadcn@latest add @gamifykit/achievements
+```
+
+## Manual Installation
+
+If you prefer to install components manually:
+
+1. Create a new file in your `components/ui` directory (e.g., `achievements.tsx`).
+2. Copy the source code for the component from the documentation.
+3. Install any required dependencies (usually listed in the component's registry item or documentation).
+
+## Usage
+
+Once installed, you can import and use the component in your React application:
+
+```tsx
+import { Achievements } from "@/components/ui/achievements";
+import { Zap, Trophy } from "lucide-react";
+
+export default function MyPage() {
+  const achievements = [
+    {
+      id: "1",
+      title: "First Steps",
+      description: "Complete your first daily task",
+      icon: <Zap fill="currentColor" className="h-6 w-6" />,
+      badgeClassName: "bg-yellow-500 border-yellow-500 text-white",
+      unlockedAt: new Date(),
+    },
+    {
+      id: "2",
+      title: "Consistency King",
+      description: "Maintain a 7-day streak",
+      icon: <Trophy className="h-6 w-6" />,
+      progress: 3,
+      total: 7,
+      isLocked: true,
+    },
+  ];
+
+  return (
+    <Achievements
+      title="My Achievements"
+      description="Track your progress and unlock rewards"
+      achievements={achievements}
+      className="max-w-md"
+    />
+  );
+}
+```
+
+## Next Steps
+
+Now that you've got the basics down, you can:
+
+- Explore all [available components](/docs/components/achievements).
+- Join our community on [GitHub](https://github.com/gamifykit/ui).
+
