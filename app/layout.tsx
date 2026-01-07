@@ -22,24 +22,6 @@ const Inter = localFont({
   preload: true,
 });
 
-// Rany is not available on Google Font and Fontsource
-const _Rany = localFont({
-  src: [
-    {
-      path: "./fonts/Rany.woff",
-      weight: "400",
-    },
-    {
-      path: "./fonts/Rany-Bold.woff",
-      weight: "700",
-    },
-  ],
-  display: "swap",
-  fallback: ["sans-serif"],
-  variable: "--font-rany",
-  preload: true,
-});
-
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={Inter.className} suppressHydrationWarning>

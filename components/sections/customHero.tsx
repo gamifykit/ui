@@ -6,10 +6,29 @@ import { Icons } from "@/components/icons";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Logo } from "../logo";
+import localFont from "next/font/local";
 
 // import { TypeAnimation } from "react-type-animation";
 
 // const ease = [0.16, 1, 0.3, 1];
+
+// Rany is not available on Google Font and Fontsource
+const Rany = localFont({
+  src: [
+    {
+      path: "../../app/fonts/Rany.woff",
+      weight: "400",
+    },
+    {
+      path: "../../app/fonts/Rany-Bold.woff",
+      weight: "700",
+    },
+  ],
+  display: "swap",
+  fallback: ["sans-serif"],
+  variable: "--font-rany",
+  preload: true,
+});
 
 interface HeroPillProps {
   href?: string;
@@ -86,7 +105,8 @@ function HeroContent({
           <span
             className={cn(
               "inline-block h-[1.1em] text-transparent bg-clip-text bg-linear-to-br from-wg-purple-500 via-wg-purple-600 to-wg-purple-700",
-              "font-rany font-bold",
+                Rany.className,
+              " font-bold",
             )}
           >
             gamify
