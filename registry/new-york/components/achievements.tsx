@@ -38,14 +38,18 @@ export function Achievements({
   className,
   ...props
 }: AchievementsProps) {
+  const unlockedCount = achievements.filter((a) => !a.isLocked).length;
+
   return (
     <Card className={cn("w-full", className)} {...props}>
       <CardHeader>
         <div className="flex items-center justify-between">
           <CardTitle>{title}</CardTitle>
-          <Badge variant="secondary">
-            {achievements.filter((a) => !a.isLocked).length} /{" "}
-            {achievements.length}
+          <Badge
+            variant="secondary"
+            aria-label={`${unlockedCount} out of ${achievements.length} achievements unlocked`}
+          >
+            {unlockedCount} / {achievements.length}
           </Badge>
         </div>
         {description && <CardDescription>{description}</CardDescription>}
@@ -76,6 +80,9 @@ export function Achievements({
             <div className="flex-1 space-y-1">
               <div className="flex items-center justify-between gap-2">
                 <p className="font-medium leading-none">
+                  <span className="sr-only">
+                    {achievement.isLocked ? "Locked: " : "Unlocked: "}
+                  </span>
                   {achievement.isSecret && achievement.isLocked
                     ? "Secret Achievement"
                     : achievement.title}
